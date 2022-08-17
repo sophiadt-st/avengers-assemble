@@ -1,14 +1,10 @@
-import md5 from 'md5';
 import { json } from '@remix-run/node';
 import { Outlet, useLoaderData } from "@remix-run/react";
+import { marvelApi } from '~/api/marvel-api';
 
 export async function loader({ params }) {
   const id = params.avengerId;
-  const ts = +new Date();
-  const hash = md5(ts+process.env.MARVEL_PRIVATE_API_KEY+process.env.MARVEL_PUBLIC_API_KEY);
-  const api = `http://gateway.marvel.com/v1/public/characters/${id}?ts=${ts}&apikey=${process.env.MARVEL_PUBLIC_API_KEY}&hash=${hash}`
-  const res = await fetch(api);
-  const payload = await res.json();
+  const payload = await marvelApi.characters(id).get();
   const [avenger] = payload.data.results;
   return json(avenger);
 }
@@ -18,7 +14,6 @@ export async function loader({ params }) {
 // }
 
 export default function Avenger() {
-//   const { avengerId } = useParams();
   const {name, description} = useLoaderData();
 
   return (
