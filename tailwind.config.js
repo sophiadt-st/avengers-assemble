@@ -7,6 +7,9 @@ module.exports = {
     container: {
       padding: '4rem',
     },
+    backgroundImage: {
+      'hero': "url('/images/avengers-bg.jpeg')",
+    },
   },
   plugins: [],
 }
