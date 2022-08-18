@@ -28,3 +28,13 @@ export async function getAvengers() {
         { id: 1010760, value: 'Justice' },
     ];
 }
+
+export async function getAvengersSeries() {
+    return [
+        { id: 1991, value: 'Avengers (1963 - 1996)' },
+        { id: 3621, value: 'Avengers (1996 - 1997)' },
+        { id: 354, value: 'Avengers (1998 - 2004)' },
+        { id: 9085, value: 'Avengers (2010 - 2012)' },
+        { id: 16452, value: 'Avengers (2012 - 2015)' },
+    ]
+}
