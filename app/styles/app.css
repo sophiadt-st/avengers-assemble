@@ -628,8 +628,8 @@ video {
   margin-bottom: 1.5rem;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mt-16 {
@@ -654,10 +654,11 @@ video {
 
 .block {
   display: block;
+>>>>>>> 3472b33 ([STYLING] styles)
 }
 
-.flex {
-  display: flex;
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .h-14 {
