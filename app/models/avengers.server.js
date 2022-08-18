@@ -1,5 +1,9 @@
 export async function getAvengers() {
     return [
+        { id: 1009220, value: 'Captain America'},
+        { id: 1009368, value: 'Iron Man'},
+        { id: 1009697, value: 'Vision'},
+        { id: 1009664, value: 'Thor'},
         { id: 1009707, value: 'Wasp' },
         { id: 1009562, value: 'Scarlet Witch' },
         { id: 1009338, value: 'Hawkeye' },
