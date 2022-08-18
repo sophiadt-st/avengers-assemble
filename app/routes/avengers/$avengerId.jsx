@@ -20,6 +20,7 @@ export default function Avenger() {
     <>
         <div>Hello from {name}</div>
         <p>{description}</p>
+        {/* <p>{thumbnail.path}.{thumbnail.extension}</p>  */}
         <Outlet />
     </>
   )
